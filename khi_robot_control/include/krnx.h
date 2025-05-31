@@ -33,16 +33,16 @@ typedef unsigned int    UINT;
 *    and copied only in accordance with the terms of such license
 *    and with the inclusion of the above copyright notice.
 *
-*    ƒtƒ@ƒCƒ‹–¼Fkrnx.h
+*    ãƒ•ã‚¡ã‚¤ãƒ«åï¼škrnx.h
 *
 *    $Header: /home/cvsroot/krnx_dll/krnx.h,v 1.33 2009/04/17 08:34:11 cvsuser Exp $
 *
-*    ‹@”\^–Ú“IF
-*	Kawasaki Robot Network Extension API ŠÖ”‚Ìƒvƒƒgƒ^ƒCƒvéŒ¾
+*    æ©Ÿèƒ½ï¼ç›®çš„ï¼š
+*	Kawasaki Robot Network Extension API é–¢æ•°ã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 *
-*    ƒOƒ[ƒoƒ‹ŠÖ”F
+*    ã‚°ãƒ­ãƒ¼ãƒãƒ«é–¢æ•°ï¼š
 *
-*    ƒOƒ[ƒoƒ‹•Ï”F
+*    ã‚°ãƒ­ãƒ¼ãƒãƒ«å¤‰æ•°ï¼š
 *
 *
 *****************************************************
@@ -54,42 +54,42 @@ extern "C"
 #endif
 
 #ifdef CAROTT3
-#define KRNX_MAX_CONTROLLER	16	/* Å‘åÚ‘±ƒRƒ“ƒgƒ[ƒ‰” */
+#define KRNX_MAX_CONTROLLER	16	/* æœ€å¤§æŽ¥ç¶šã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©æ•° */
 #else
-#define KRNX_MAX_CONTROLLER	16	/* Å‘åÚ‘±ƒRƒ“ƒgƒ[ƒ‰” */
+#define KRNX_MAX_CONTROLLER	16	/* æœ€å¤§æŽ¥ç¶šã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©æ•° */
 #endif
-#define KRNX_MAX_ROBOT		8	/* 1ƒRƒ“ƒgƒ[ƒ‰‚ªƒTƒ|[ƒg‚·‚éƒƒ{ƒbƒg‘ä” */
-#define KRNX_MAX_PCPROG         3       /* 1ƒRƒ“ƒgƒ[ƒ‰‚ªƒTƒ|[ƒg‚·‚éPCƒvƒƒOƒ‰ƒ€” */
+#define KRNX_MAX_ROBOT		8	/* 1ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ãŒã‚µãƒãƒ¼ãƒˆã™ã‚‹ãƒ­ãƒœãƒƒãƒˆå°æ•° */
+#define KRNX_MAX_PCPROG         3       /* 1ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ãŒã‚µãƒãƒ¼ãƒˆã™ã‚‹PCãƒ—ãƒ­ã‚°ãƒ©ãƒ æ•° */
 
 
-/* Å‘åŽ²” */
+/* æœ€å¤§è»¸æ•° */
 #define KRNX_MAXAXES	18      /* this should be same as the defined in AS system */
 
-/* Å‘åM†” */
+/* æœ€å¤§ä¿¡å·æ•° */
 #define KRNX_MAXSIGNAL  512
 
 /* FX03496 a++ */
-/* Å‘åƒGƒ‰[” */
+/* æœ€å¤§ã‚¨ãƒ©ãƒ¼æ•° */
 #define KRNX_MAX_ERROR_LIST_SIZ 10
 #define KRNX_MAX_ERROR_MSG_SIZ  160
 /* FX03496 a-- */
-	
+
 #define INT_CBUF_SIZ	512
 
 #define NON_COMPATIBLE
 /*
- * !! ’ ˆÓ !!
+ * !! æ³¨ æ„ !!
  *
- * krnx_dll‚ÍAM†”‚ª512“_‚Ü‚Å‚µ‚©‘Î‰ž‚µ‚Ä‚¢‚È‚©‚Á‚½‚ª
- * ã‹L #define NON_COMPATIBLE ‚ðƒRƒƒ“ƒgƒAƒEƒg‚·‚é‚±‚Æ‚ÅA
- * 960“_‚Ü‚Å‘Î‰ž‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚·B
- * ‚Ü‚½AƒCƒ“ƒ^ƒvƒŠƒ^—p‚Ìƒoƒbƒtƒ@ƒTƒCƒY‚à80ƒoƒCƒg‚Å‚ ‚Á‚½
- * ‚Æ‚±‚ë‚ª512ƒoƒCƒg‚Ü‚ÅŠg’£‚³‚ê‚Ü‚·B
+ * krnx_dllã¯ã€ä¿¡å·æ•°ãŒ512ç‚¹ã¾ã§ã—ã‹å¯¾å¿œã—ã¦ã„ãªã‹ã£ãŸãŒ
+ * ä¸Šè¨˜ #define NON_COMPATIBLE ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã“ã¨ã§ã€
+ * 960ç‚¹ã¾ã§å¯¾å¿œã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™ã€‚
+ * ã¾ãŸã€ã‚¤ãƒ³ã‚¿ãƒ—ãƒªã‚¿ç”¨ã®ãƒãƒƒãƒ•ã‚¡ã‚µã‚¤ã‚ºã‚‚80ãƒã‚¤ãƒˆã§ã‚ã£ãŸ
+ * ã¨ã“ã‚ãŒ512ãƒã‚¤ãƒˆã¾ã§æ‹¡å¼µã•ã‚Œã¾ã™ã€‚
  *
- * ‚±‚ÌƒRƒƒ“ƒg‚ÍAM†”‚¨‚æ‚Ñƒoƒbƒtƒ@ƒTƒCƒY‚ªŠg’£‚³‚ê‚Ä
- * ‚¢‚È‚¢]—ˆ‚Ìƒo[ƒWƒ‡ƒ“‚ÆŠg’£‚³‚ê‚½Vƒo[ƒWƒ‡ƒ“‚ÌŒÝŠ·‚ª
- * ‚Æ‚ê‚½Žž“_‚Åíœ‚µ‚Ä‚­‚¾‚³‚¢B
- * ‚Ü‚½A‡‚¹‚Ä NON_COMPATIBLE ‚àíœ‚µ‚Ä‚­‚¾‚³‚¢B
+ * ã“ã®ã‚³ãƒ¡ãƒ³ãƒˆã¯ã€ä¿¡å·æ•°ãŠã‚ˆã³ãƒãƒƒãƒ•ã‚¡ã‚µã‚¤ã‚ºãŒæ‹¡å¼µã•ã‚Œã¦
+ * ã„ãªã„å¾“æ¥ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã¨æ‹¡å¼µã•ã‚ŒãŸæ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®äº’æ›ãŒ
+ * ã¨ã‚ŒãŸæ™‚ç‚¹ã§å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚
+ * ã¾ãŸã€åˆã›ã¦ NON_COMPATIBLE ã‚‚å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚
  *
  */
 
@@ -99,7 +99,7 @@ extern "C"
 
 #define DBG_FVAL_NUM		16
 
-/* ƒGƒ‰[ƒR[ƒh */
+/* ã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ */
 #define KRNX_NOERROR            0
 #define KRNX_E_BADARGS          (-0x1000)
 #define KRNX_E_INTERNAL         (-0x1001)
@@ -168,30 +168,30 @@ extern "C"
 
 #define KRNX_E_UNDEF            (-0xFFFF)
 
-/* RTƒTƒCƒNƒŠƒbƒN’ÊMƒf[ƒ^Ží—Þ */
-#define KRNX_CYC_KIND_ANGLE              (0x0001)   /* ŠeŽ²ˆÊ’u(Œ»Ý’l) [rad or mm] */
-#define KRNX_CYC_KIND_ANGLE_REF          (0x0002)   /* ŠeŽ²ˆÊ’u(Žw—ß’l) [rad or mm] */
-#define KRNX_CYC_KIND_CURRENT            (0x0004)   /* ŠeŽ²“d—¬’l(Œ»Ý’l) [A] */
-#define KRNX_CYC_KIND_ENCORDER           (0x0008)   /* ŠeŽ²ƒGƒ“ƒR[ƒ_[’l(Œ»Ý’l) [bit] */
-#define KRNX_CYC_KIND_ERROR              (0x0010)   /* ƒGƒ‰[ƒ‰ƒ“ƒv/ƒR[ƒh */
-#define KRNX_CYC_KIND_CURRENT_REF        (0x0020)   /* ŠeŽ²“d—¬’l(Žw—ß’l) [A] */
-#define KRNX_CYC_KIND_CURRENT_SAT        (0x0040)   /* ŠeŽ²“d—¬–O˜a—¦(Œ»Ý’l/Žw—ß’l) */
-#define KRNX_CYC_KIND_ENCORDER_REF       (0x0080)   /* ŠeŽ²ƒGƒ“ƒR[ƒ_[’l(Žw—ß’l) [bit] */
-#define KRNX_CYC_KIND_ANGLE_VEL          (0x0100)   /* ŠeŽ²‘¬“x’l(Œ»Ý’l/Žw—ß’l) [rad/s or mm/s] */
-#define KRNX_CYC_KIND_XYZOAT             (0x0200)   /* •ÏŠ·ˆÊ’u/‘¬“x(Œ»Ý’l/Žw—ß’l) [rad, mm, rad/s or mm/s][rad/s or mm/s] */
-#define KRNX_CYC_KIND_SIG_EXTERNAL       (0x0400)   /* ŠO•”o—Í/“ü—ÍM† */
-#define KRNX_CYC_KIND_SIG_INTERNAL       (0x0800)   /* “à•”M† */
-#define KRNX_CYC_KIND_ROBOT_STATUS       (0x1000)   /* ƒƒ{ƒbƒgó‘Ô */
-#define KRNX_CYC_KIND_SIZE               (13)       /* Ží—Þ” */
+/* RTã‚µã‚¤ã‚¯ãƒªãƒƒã‚¯é€šä¿¡ãƒ‡ãƒ¼ã‚¿ç¨®é¡ž */
+#define KRNX_CYC_KIND_ANGLE              (0x0001)   /* å„è»¸ä½ç½®(ç¾åœ¨å€¤) [rad or mm] */
+#define KRNX_CYC_KIND_ANGLE_REF          (0x0002)   /* å„è»¸ä½ç½®(æŒ‡ä»¤å€¤) [rad or mm] */
+#define KRNX_CYC_KIND_CURRENT            (0x0004)   /* å„è»¸é›»æµå€¤(ç¾åœ¨å€¤) [A] */
+#define KRNX_CYC_KIND_ENCORDER           (0x0008)   /* å„è»¸ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ãƒ¼å€¤(ç¾åœ¨å€¤) [bit] */
+#define KRNX_CYC_KIND_ERROR              (0x0010)   /* ã‚¨ãƒ©ãƒ¼ãƒ©ãƒ³ãƒ—/ã‚³ãƒ¼ãƒ‰ */
+#define KRNX_CYC_KIND_CURRENT_REF        (0x0020)   /* å„è»¸é›»æµå€¤(æŒ‡ä»¤å€¤) [A] */
+#define KRNX_CYC_KIND_CURRENT_SAT        (0x0040)   /* å„è»¸é›»æµé£½å’ŒçŽ‡(ç¾åœ¨å€¤/æŒ‡ä»¤å€¤) */
+#define KRNX_CYC_KIND_ENCORDER_REF       (0x0080)   /* å„è»¸ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ãƒ¼å€¤(æŒ‡ä»¤å€¤) [bit] */
+#define KRNX_CYC_KIND_ANGLE_VEL          (0x0100)   /* å„è»¸é€Ÿåº¦å€¤(ç¾åœ¨å€¤/æŒ‡ä»¤å€¤) [rad/s or mm/s] */
+#define KRNX_CYC_KIND_XYZOAT             (0x0200)   /* å¤‰æ›ä½ç½®/é€Ÿåº¦(ç¾åœ¨å€¤/æŒ‡ä»¤å€¤) [rad, mm, rad/s or mm/s][rad/s or mm/s] */
+#define KRNX_CYC_KIND_SIG_EXTERNAL       (0x0400)   /* å¤–éƒ¨å‡ºåŠ›/å…¥åŠ›ä¿¡å· */
+#define KRNX_CYC_KIND_SIG_INTERNAL       (0x0800)   /* å†…éƒ¨ä¿¡å· */
+#define KRNX_CYC_KIND_ROBOT_STATUS       (0x1000)   /* ãƒ­ãƒœãƒƒãƒˆçŠ¶æ…‹ */
+#define KRNX_CYC_KIND_SIZE               (13)       /* ç¨®é¡žæ•° */
 #define KRNX_CYC_KIND_LEGACY             (KRNX_CYC_KIND_ANGLE|KRNX_CYC_KIND_ANGLE_REF|KRNX_CYC_KIND_CURRENT|KRNX_CYC_KIND_ERROR)
 #define KRNX_CYC_KIND_SUPPORTED          ((1<<KRNX_CYC_KIND_SIZE)-1)
 
-/* RTƒTƒCƒNƒŠƒbƒN§Œäƒf[ƒ^Ží—Þ */
-#define KRNX_CYC_KRNX2AS_KIND_ANGLE_RELATIVE      (0x0001)   /* ŠeŽ²ˆÊ’u(‘Š‘Î’l) [rad or mm] */
-#define KRNX_CYC_KRNX2AS_KIND_SIG_EXTERNAL_OUTPUT (0x0002)   /* ŠO•”o—ÍM† */
-#define KRNX_CYC_KRNX2AS_KIND_SIG_EXTERNAL_INPUT  (0x0004)   /* ŠO•”“ü—ÍM† */
-#define KRNX_CYC_KRNX2AS_KIND_SIG_INTERNAL        (0x0008)   /* “à•”M† */
-#define KRNX_CYC_KRNX2AS_KIND_SIZE                (4)        /* Ží—Þ”*/
+/* RTã‚µã‚¤ã‚¯ãƒªãƒƒã‚¯åˆ¶å¾¡ãƒ‡ãƒ¼ã‚¿ç¨®é¡ž */
+#define KRNX_CYC_KRNX2AS_KIND_ANGLE_RELATIVE      (0x0001)   /* å„è»¸ä½ç½®(ç›¸å¯¾å€¤) [rad or mm] */
+#define KRNX_CYC_KRNX2AS_KIND_SIG_EXTERNAL_OUTPUT (0x0002)   /* å¤–éƒ¨å‡ºåŠ›ä¿¡å· */
+#define KRNX_CYC_KRNX2AS_KIND_SIG_EXTERNAL_INPUT  (0x0004)   /* å¤–éƒ¨å…¥åŠ›ä¿¡å· */
+#define KRNX_CYC_KRNX2AS_KIND_SIG_INTERNAL        (0x0008)   /* å†…éƒ¨ä¿¡å· */
+#define KRNX_CYC_KRNX2AS_KIND_SIZE                (4)        /* ç¨®é¡žæ•°*/
 #define KRNX_CYC_KRNX2AS_KIND_LEGACY              (KRNX_CYC_KRNX2AS_KIND_ANGLE_RELATIVE)
 #define KRNX_CYC_KRNX2AS_KIND_SUPPORTED           ((1<<KRNX_CYC_KRNX2AS_KIND_SIZE)-1 )
 
@@ -254,9 +254,9 @@ typedef struct
 typedef struct
 {
 #ifdef NON_COMPATIBLE
-    /* –{—ˆ”z—ñƒTƒCƒY‚ÍAKRNX_MAX_ROBOT‚Å‚Í‚È‚­A   */
-    /* 2(AS‘¤‚ÌÅ‘åƒA[ƒ€”^ƒRƒ“ƒgƒ[ƒ‰)‚Å        */
-    /* \•ª‚Å‚ ‚é‚ªAŒÝŠ·«Šm•Û‚Ì‚½‚ß‚»‚Ì‚Ü‚Ü‚Æ‚·‚é */
+    /* æœ¬æ¥é…åˆ—ã‚µã‚¤ã‚ºã¯ã€KRNX_MAX_ROBOTã§ã¯ãªãã€   */
+    /* 2(ASå´ã®æœ€å¤§ã‚¢ãƒ¼ãƒ æ•°ï¼ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©)ã§        */
+    /* ååˆ†ã§ã‚ã‚‹ãŒã€äº’æ›æ€§ç¢ºä¿ã®ãŸã‚ãã®ã¾ã¾ã¨ã™ã‚‹ */
     TKrnxMonInfo      mon[KRNX_MAX_ROBOT];
     TKrnxStepperInfo  robot[KRNX_MAX_ROBOT];
 #else
@@ -284,7 +284,7 @@ typedef struct TSignalEx
     unsigned long usr_internal[INTERNAL_MAX_SIGNAL/32];
 } TSignalEx;
 
-/*** RTCî•ñ ***/
+/*** RTCæƒ…å ± ***/
 typedef struct TKrnxRtcInfo
 {
     short cyc;
@@ -292,19 +292,19 @@ typedef struct TKrnxRtcInfo
     short interpolation;
 } TKrnxRtcInfo;
 
-/* ƒT[ƒ{—p•Ï” */
+/* ã‚µãƒ¼ãƒœç”¨å¤‰æ•° */
 typedef struct TDebugVariableInfo
 {
     float val[KRNX_MAXAXES][DBG_FVAL_NUM];
 }TDebugVariableInfo;
 
-/* M†î•ñ */
+/* ä¿¡å·æƒ…å ± */
 typedef struct TDebugSignalInfo
 {
     TSignalEx 	sig;
 }TDebugSignalInfo;
 
-/* ƒVƒXƒeƒ€î•ñ */
+/* ã‚·ã‚¹ãƒ†ãƒ æƒ…å ± */
 typedef struct TDebugSystemInfo
 {
     int a;
@@ -312,13 +312,13 @@ typedef struct TDebugSystemInfo
     int c;
 }TDebugSystemInfo;
 
-/* ƒƒ{ƒbƒg“®ìî•ñ */
+/* ãƒ­ãƒœãƒƒãƒˆå‹•ä½œæƒ…å ± */
 typedef struct TDebugTrajInfo
 {
-    char	step_info[INT_CBUF_SIZ];		/* ƒXƒeƒbƒvî•ñ simu.h */
-    float	sp;			/* ‘¬“x   */
-    float 	accu;			/* ‰Á‘¬“x */
-    int		ctl_axis;		/* Ž²” */
+    char	step_info[INT_CBUF_SIZ];		/* ã‚¹ãƒ†ãƒƒãƒ—æƒ…å ± simu.h */
+    float	sp;			/* é€Ÿåº¦   */
+    float 	accu;			/* åŠ é€Ÿåº¦ */
+    int		ctl_axis;		/* è»¸æ•° */
 }TDebugTrajInfo;
 
 typedef struct TDebugMotionInfo
@@ -331,10 +331,10 @@ typedef struct TDebugMotionInfo
     long     vel_ref[KRNX_MAXAXES];
     float    cur_ref[KRNX_MAXAXES];
     float    tool[KRNX_MAXAXES];
-    int         mode;			/* ƒ‚[ƒh  0:RPLAN, 1:RMOVE, 2:RWAIT, 3:RHOLD, 4:REND */
+    int         mode;			/* ãƒ¢ãƒ¼ãƒ‰  0:RPLAN, 1:RMOVE, 2:RWAIT, 3:RHOLD, 4:REND */
     int	    flg_stepup;
     float   end_pos_jtang[KRNX_MAXAXES];
-    float   end_pos_trans[KRNX_MAXAXES];    
+    float   end_pos_trans[KRNX_MAXAXES];
     unsigned short clamp_spot_flg;
 }TDebugMotionInfo;
 
@@ -342,7 +342,7 @@ typedef struct TKrnxDebugInfoEnt
 {
     TDebugSystemInfo	sys;		/* */
     TDebugMotionInfo	mtn;		/* */
-    TDebugTrajInfo	trj;		/* */   
+    TDebugTrajInfo	trj;		/* */
     TDebugVariableInfo	val;		/* */
     TDebugSignalInfo	io;		/* */
 }TKrnxDebugInfoEnt;
@@ -384,9 +384,9 @@ typedef struct TKrnxRtIoCtlInternal
     char    data[INTERNAL_MAX_SIGNAL/8];
 }TKrnxRtIoCtlInternal;
 
-// C#(PC-AS)Œü‚¯‘Îô
-// C#‚Å‚ÍƒfƒtƒHƒ‹ƒgˆø”‚ÍŽg—p‚Å‚«‚È‚¢
-// •K—v‚ ‚ê‚Î•Ê‚ÌAPI‚ð—pˆÓ‚·‚é
+// C#(PC-AS)å‘ã‘å¯¾ç­–
+// C#ã§ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°ã¯ä½¿ç”¨ã§ããªã„
+// å¿…è¦ã‚ã‚Œã°åˆ¥ã®APIã‚’ç”¨æ„ã™ã‚‹
 //#ifdef __cplusplus
 //DECLSPEC_IMPORT int WINAPI krnx_Open( int cont_no, char *hostname = NULL, char *port_path = NULL );
 //#else
@@ -397,22 +397,22 @@ DECLSPEC_IMPORT int WINAPI krnx_Close( int sd );
 DECLSPEC_IMPORT int WINAPI krnx_SetAppParam( int type, char *param );	/* FX00436 a */
 
 /**************************
- * AUXAPI(ƒ‚ƒjƒ^ƒRƒ}ƒ“ƒh) *
+ * AUXAPI(ãƒ¢ãƒ‹ã‚¿ã‚³ãƒžãƒ³ãƒ‰) *
  **************************
  */
 
 /* element type for DELETE,LIST,SAVE */
-#define	QUAL_PRG	0x0001	/* ƒvƒƒOƒ‰ƒ€A•Ï” */
+#define	QUAL_PRG	0x0001	/* ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€å¤‰æ•° */
 #define	QUAL_LOC	0x0002
 #define	QUAL_REAL	0x0004
 #define	QUAL_STR	0x0008
 #define	QUAL_INT	0x0010
-#define	QUAL_SYS	0x0020	/* ƒf[ƒ^ */
+#define	QUAL_SYS	0x0020	/* ãƒ‡ãƒ¼ã‚¿ */
 #define	QUAL_ROB	0x0040
 #define	QUAL_AUX	0x0080
 #define	QUAL_ARC	0x0100
 #define	QUAL_IFP	0x0200
-#define	QUAL_ELOG	0x0400	/* “ÁŽêƒf[ƒ^ */
+#define	QUAL_ELOG	0x0400	/* ç‰¹æ®Šãƒ‡ãƒ¼ã‚¿ */
 #define	QUAL_FLT	0x0800
 
 #ifdef __cplusplus
@@ -526,7 +526,7 @@ DECLSPEC_IMPORT int WINAPI krnx_IoSetDO( int cont_no, const char *out, const cha
 DECLSPEC_IMPORT int WINAPI krnx_SetAsApiTimeoutPeriod( int cont_no, int period ); /* FX02360 a */
 
 /**************************
- *      ‡‹t•ÏŠ·API       *
+ *      é †é€†å¤‰æ›API       *
  **************************
  */
 
@@ -562,44 +562,44 @@ DECLSPEC_IMPORT int WINAPI krnx_SetJT1Mode( int mode );
  */
 typedef struct
 {
-    float    ang[KRNX_MAXAXES];             /* ŠeŽ²ˆÊ’u(Œ»Ý’l) [rad or mm] */
-    float    ang_ref[KRNX_MAXAXES];         /* ŠeŽ²ˆÊ’u(Žw—ß’l) [rad or mm] */
-    float    cur[KRNX_MAXAXES];             /* ŠeŽ²“d—¬’l(Œ»Ý’l) [A] */
-    int      enc[KRNX_MAXAXES];             /* ŠeŽ²ƒGƒ“ƒR[ƒ_[’l(Œ»Ý’l) [bit] */
+    float    ang[KRNX_MAXAXES];             /* å„è»¸ä½ç½®(ç¾åœ¨å€¤) [rad or mm] */
+    float    ang_ref[KRNX_MAXAXES];         /* å„è»¸ä½ç½®(æŒ‡ä»¤å€¤) [rad or mm] */
+    float    cur[KRNX_MAXAXES];             /* å„è»¸é›»æµå€¤(ç¾åœ¨å€¤) [A] */
+    int      enc[KRNX_MAXAXES];             /* å„è»¸ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ãƒ¼å€¤(ç¾åœ¨å€¤) [bit] */
 } TKrnxCurMotionData;
 
 typedef struct
 {
-    float    ang[KRNX_MAXAXES];             /* ŠeŽ²ˆÊ’u(Œ»Ý’l) [rad or mm] */
-    float    ang_ref[KRNX_MAXAXES];         /* ŠeŽ²ˆÊ’u(Žw—ß’l) [rad or mm] */
-    float    cur[KRNX_MAXAXES];             /* ŠeŽ²“d—¬’l(Œ»Ý’l) [A] */
-    int      enc[KRNX_MAXAXES];             /* ŠeŽ²ƒGƒ“ƒR[ƒ_[’l(Œ»Ý’l) [bit] */
-    float    cur_ref[KRNX_MAXAXES];         /* ŠeŽ²“d—¬’l(Žw—ß’l) [A] */
-    float    cur_sat[KRNX_MAXAXES];         /* ŠeŽ²“d—¬–O˜a—¦(Œ»Ý’lj */
-    float    cur_sat_ref[KRNX_MAXAXES];     /* ŠeŽ²“d—¬–O˜a—¦(Žw—ß’l) */
-    int      enc_ref[KRNX_MAXAXES];         /* ŠeŽ²ƒGƒ“ƒR[ƒ_[’l(Žw—ß’l) [bit] */
-    float    ang_vel[KRNX_MAXAXES];         /* ŠeŽ²‘¬“x’l(Œ»Ý’l) [rad/s or mm/s] */
-    float    ang_vel_ref[KRNX_MAXAXES];     /* ŠeŽ²‘¬“x’l(Žw—ß’l) [rad/s or mm/s] */
-    float    xyzoat[6];                     /* •ÏŠ·ˆÊ’u(Œ»Ý’l) [rad or mm] */
-    float    xyzoat_ref[6];                 /* •ÏŠ·ˆÊ’u(Žw—ß’l) [rad or mm] */
-    float    xyzoat_vel;                    /* •ÏŠ·‘¬“x’l(Œ»Ý’l) [mm/s] */
-    float    xyzoat_vel_ref;                /* •ÏŠ·‘¬“x’l(Žw—ß’l) [mm/s] */
+    float    ang[KRNX_MAXAXES];             /* å„è»¸ä½ç½®(ç¾åœ¨å€¤) [rad or mm] */
+    float    ang_ref[KRNX_MAXAXES];         /* å„è»¸ä½ç½®(æŒ‡ä»¤å€¤) [rad or mm] */
+    float    cur[KRNX_MAXAXES];             /* å„è»¸é›»æµå€¤(ç¾åœ¨å€¤) [A] */
+    int      enc[KRNX_MAXAXES];             /* å„è»¸ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ãƒ¼å€¤(ç¾åœ¨å€¤) [bit] */
+    float    cur_ref[KRNX_MAXAXES];         /* å„è»¸é›»æµå€¤(æŒ‡ä»¤å€¤) [A] */
+    float    cur_sat[KRNX_MAXAXES];         /* å„è»¸é›»æµé£½å’ŒçŽ‡(ç¾åœ¨å€¤ï¼‰ */
+    float    cur_sat_ref[KRNX_MAXAXES];     /* å„è»¸é›»æµé£½å’ŒçŽ‡(æŒ‡ä»¤å€¤) */
+    int      enc_ref[KRNX_MAXAXES];         /* å„è»¸ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ãƒ¼å€¤(æŒ‡ä»¤å€¤) [bit] */
+    float    ang_vel[KRNX_MAXAXES];         /* å„è»¸é€Ÿåº¦å€¤(ç¾åœ¨å€¤) [rad/s or mm/s] */
+    float    ang_vel_ref[KRNX_MAXAXES];     /* å„è»¸é€Ÿåº¦å€¤(æŒ‡ä»¤å€¤) [rad/s or mm/s] */
+    float    xyzoat[6];                     /* å¤‰æ›ä½ç½®(ç¾åœ¨å€¤) [rad or mm] */
+    float    xyzoat_ref[6];                 /* å¤‰æ›ä½ç½®(æŒ‡ä»¤å€¤) [rad or mm] */
+    float    xyzoat_vel;                    /* å¤‰æ›é€Ÿåº¦å€¤(ç¾åœ¨å€¤) [mm/s] */
+    float    xyzoat_vel_ref;                /* å¤‰æ›é€Ÿåº¦å€¤(æŒ‡ä»¤å€¤) [mm/s] */
 } TKrnxCurMotionDataEx;
 
 typedef struct
 {
-    short motor_lamp;                       /* ƒ‚[ƒ^ƒ‰ƒ“ƒv */
-    short cycle_lamp;                       /* ƒTƒCƒNƒ‹ƒ‰ƒ“ƒv */
-    short repeat_lamp;                      /* ƒŠƒs[ƒgƒ‰ƒ“ƒv */
-    short run_lamp;                         /* ƒŠƒs[ƒgƒ‰ƒ“ƒv */
-    short trigger_lamp;                     /* ƒgƒŠƒK[ƒ‰ƒ“ƒv */
-    short teach_lock_lamp;                  /* ƒeƒB[ƒ`ƒƒbƒNƒ‰ƒ“ƒv */
-    short emergency;                        /* ”ñí’âŽ~ƒ‰ƒ“ƒv */
-    short rtc_active;                       /* RTCƒAƒNƒeƒBƒuó‘Ô */
-    short rb_program_run;                   /* ƒƒ{ƒbƒgƒvƒƒOƒ‰ƒ€ŽÀsó‘Ôƒ`ƒFƒbƒN */
-    short monitor_speed;                    /* ƒ‚ƒjƒ^‘¬“x[%] */
-    short check_speed;                      /* ƒ`ƒFƒbƒN‘¬“x[mm/sec] */
-    short enverr_warm;                      /* •Î·ˆÙíó‘Ô[Ž²ƒrƒbƒg] */
+    short motor_lamp;                       /* ãƒ¢ãƒ¼ã‚¿ãƒ©ãƒ³ãƒ— */
+    short cycle_lamp;                       /* ã‚µã‚¤ã‚¯ãƒ«ãƒ©ãƒ³ãƒ— */
+    short repeat_lamp;                      /* ãƒªãƒ”ãƒ¼ãƒˆãƒ©ãƒ³ãƒ— */
+    short run_lamp;                         /* ãƒªãƒ”ãƒ¼ãƒˆãƒ©ãƒ³ãƒ— */
+    short trigger_lamp;                     /* ãƒˆãƒªã‚¬ãƒ¼ãƒ©ãƒ³ãƒ— */
+    short teach_lock_lamp;                  /* ãƒ†ã‚£ãƒ¼ãƒãƒ­ãƒƒã‚¯ãƒ©ãƒ³ãƒ— */
+    short emergency;                        /* éžå¸¸åœæ­¢ãƒ©ãƒ³ãƒ— */
+    short rtc_active;                       /* RTCã‚¢ã‚¯ãƒ†ã‚£ãƒ–çŠ¶æ…‹ */
+    short rb_program_run;                   /* ãƒ­ãƒœãƒƒãƒˆãƒ—ãƒ­ã‚°ãƒ©ãƒ å®Ÿè¡ŒçŠ¶æ…‹ãƒã‚§ãƒƒã‚¯ */
+    short monitor_speed;                    /* ãƒ¢ãƒ‹ã‚¿é€Ÿåº¦[%] */
+    short check_speed;                      /* ãƒã‚§ãƒƒã‚¯é€Ÿåº¦[mm/sec] */
+    short enverr_warm;                      /* åå·®ç•°å¸¸çŠ¶æ…‹[è»¸ãƒ“ãƒƒãƒˆ] */
     char reserved[8];
 } TKrnxCurRobotStatus;
 
@@ -638,7 +638,7 @@ DECLSPEC_IMPORT int WINAPI krnx_SetConveyorSpeedEx( int cont_no, int robot_no, i
 DECLSPEC_IMPORT int WINAPI krnx_SetConveyorPosEx( int cont_no, int robot_no, int axis_no, int wk_no, float pos, float *prev  );
 
 /*******************************
- * KRNX“à•”API
+ * KRNXå†…éƒ¨API
  *******************************
  */
 DECLSPEC_IMPORT int WINAPI krnx_GetKrnxVersion( char *ver_text, int ver_len ); /* FX00919 a */
@@ -676,7 +676,7 @@ DECLSPEC_IMPORT	int WINAPI krnx_eth_close( int cont_no );
 DECLSPEC_IMPORT	int WINAPI krnx_SetPriority( DWORD p );
 
 /*******************************
- * ‹Œ‚o‚bƒRƒ“‚Æ‚ÌŒÝŠ·«‚Ì‚½‚ß
+ * æ—§ï¼°ï¼£ã‚³ãƒ³ã¨ã®äº’æ›æ€§ã®ãŸã‚
  *******************************
  */
 DECLSPEC_IMPORT int WINAPI krnx_NotSupport( void );
@@ -686,7 +686,7 @@ DECLSPEC_IMPORT int WINAPI krnx_GetArmMode( int, int );
 
 typedef struct
 {
-    short	no, num;	// M†”Ô† 1`1001`Aƒrƒbƒg”
+    short	no, num;	// ä¿¡å·ç•ªå· 1ï½ž1001ï½žã€ãƒ“ãƒƒãƒˆæ•°
     char 	str[80];	//
 }TKrnxDDSig;
 
@@ -695,7 +695,7 @@ DECLSPEC_IMPORT	int WINAPI krnx_DDSigInfo( int cont_no, int io_no, const TKrnxDD
 DECLSPEC_IMPORT	int WINAPI krnx_GetMotionInfoSync( int cont_no, int robot_no, TKrnxMotionInfo *md, int data_num );
 
 /*******************************
- * PcAs‹N“®API
+ * PcAsèµ·å‹•API
  *******************************
  */
 
