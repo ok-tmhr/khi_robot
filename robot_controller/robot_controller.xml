@@ -1,5 +1,6 @@
-<library path="robot_controller">
-    <class type="robot_controller::RobotController"
+<library path="rs_robot_controller">
+    <class name="robot_controller/RobotController"
+        type="robot_controller::RobotController"
         base_class_type="controller_interface::ControllerInterface">
         <description>This is a sample template controller</description>
     </class>

@@ -7,33 +7,32 @@ endif()
 
 # find dependencies
 find_package(ament_cmake_auto REQUIRED)
-find_package(ament_cmake_ros REQUIRED)
 ament_auto_find_build_dependencies()
 
-pluginlib_export_plugin_description_file(robot_controller robot_controller.xml)
+pluginlib_export_plugin_description_file(rs_robot_controller robot_controller.xml)
 
-add_library(robot_controller src/robot_controller.cpp)
-add_library(robot_controller::robot_controller ALIAS robot_controller)
-target_compile_features(robot_controller PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-target_include_directories(robot_controller PUBLIC
+add_library(rs_robot_controller src/robot_controller.cpp)
+add_library(robot_controller::robot_controller ALIAS rs_robot_controller)
+target_compile_features(rs_robot_controller PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_include_directories(rs_robot_controller PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
 ament_target_dependencies(
-  robot_controller
+  rs_robot_controller
   pluginlib
   controller_interface
 )
 
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
-target_compile_definitions(robot_controller PRIVATE "ROBOT_CONTROLLER_BUILDING_LIBRARY")
+target_compile_definitions(rs_robot_controller PRIVATE "ROBOT_CONTROLLER_BUILDING_LIBRARY")
 
 install(
   DIRECTORY include/
   DESTINATION include/${PROJECT_NAME}
 )
 install(
-  TARGETS robot_controller
+  TARGETS rs_robot_controller
   EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
